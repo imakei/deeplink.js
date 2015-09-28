@@ -62,10 +62,10 @@
    */
   deeplink.launchAndroid = function (options) {
     if(navigator.userAgent.match(/Chrome/)) {
-      location.replace(options.urlScheme);
+      location.href = options.urlScheme;
       var self = this;
       setTimeout(function() {
-        location.replace(options.storeLink);
+        location.href = options.storeLink;
       }, deeplink.settings.wait);
 
       return;
